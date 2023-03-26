@@ -1,0 +1,86 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <BaseOutputPath>$(SolutionDir)\bin\</BaseOutputPath>
+    <OutputPath>$(SolutionDir)\bin\</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <UseCommonOutputDirectory>true</UseCommonOutputDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="bbb.jpg" />
+    <None Remove="butonlog.PNG" />
+    <None Remove="byo.jpg" />
+    <None Remove="cookies.jpg" />
+    <None Remove="E.PNG" />
+    <None Remove="F6CB7F2A-C82C-4DE1-BD4F-EB4F7B7040DD.jpg" />
+    <None Remove="images.jpg" />
+    <None Remove="images.png" />
+    <None Remove="istock-1061619638_preview.mp4" />
+    <None Remove="kutd.jpg" />
+    <None Remove="log.jpg" />
+    <None Remove="m.jpg" />
+    <None Remove="mr-donuts.png" />
+    <None Remove="opening\A.PNG" />
+    <None Remove="opening\bjbjb.jpg" />
+    <None Remove="opening\byo.jpg" />
+    <None Remove="opening\hand.PNG" />
+    <None Remove="opening\heart.PNG" />
+    <None Remove="opening\kutd.jpg" />
+    <None Remove="opening\peaple.PNG" />
+    <None Remove="OrderVideo.mp4" />
+    <None Remove="ShowImage.jpeg" />
+    <None Remove="user.png" />
+    <None Remove="USERR.png" />
+    <None Remove="video project_Trim.mp4" />
+    <None Remove="WhatsApp Image 2022-12-17 at 21.54.05.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bbb.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OrderVideo.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="video project_Trim.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj" />
+    <ProjectReference Include="..\Simulator\Simulator.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="byo.jpg" />
+    <Resource Include="E.PNG" />
+    <Resource Include="F6CB7F2A-C82C-4DE1-BD4F-EB4F7B7040DD.jpg" />
+    <Resource Include="images.jpg" />
+    <Resource Include="images.png" />
+    <Resource Include="kutd.jpg" />
+    <Resource Include="log.jpg" />
+    <Resource Include="mr-donuts.png" />
+    <Resource Include="opening\A.PNG" />
+    <Resource Include="opening\bjbjb.jpg" />
+    <Resource Include="opening\byo.jpg" />
+    <Resource Include="opening\kutd.jpg" />
+    <Resource Include="opening\hand.PNG" />
+    <Resource Include="opening\peaple.PNG" />
+    <Resource Include="opening\heart.PNG" />
+    <Resource Include="ShowImage.jpeg" />
+    <Resource Include="user.png" />
+    <Resource Include="USERR.png" />
+    <Resource Include="WhatsApp Image 2022-12-17 at 21.54.05.jpeg" />
+    <Resource Include="butonlog.PNG" />
+    <Resource Include="cookies.jpg" />
+    <Resource Include="m.jpg" />
+  </ItemGroup>
+
+</Project>

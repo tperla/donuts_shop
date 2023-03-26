@@ -1,0 +1,45 @@
+﻿<Application x:Class="PL.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PL"
+             StartupUri="main.xaml">
+    <Application.Resources>
+        <local:ConvertImagePathToBitMap x:Key="ImagePathToBitMap"/>
+        <local:ConvertBooleanToColors x:Key="BooleanToColor"/>
+        <local:ConvertBoolean x:Key="ConvertBoolean"/>
+        <local:IntToVisibilityConverter x:Key="IntToVisibilityConverter" />
+        <local:NullOrEmptyToVisibilityConverter x:Key="NullOrEmptyToVisibilityConverter" />
+        <local:convertByStatus x:Key="convertByStatus" />
+        <local:convertToIsEnabledByStatus x:Key="convertToIsEnabledByStatus" />
+        <local:convertLogIn x:Key="convertLogIn"/>
+        <local:convertSignIn x:Key="convertSignIn"/>
+        <local:convertTime x:Key="convertTime"/>
+        <local:ConvertTheContentByState x:Key="ConvertTheContentByState"/>
+        <local:ConvertShipVisibility x:Key="ConvertShipVisibility"/>
+        <local:ConvertDeliveryVisibility x:Key="ConvertDeliveryVisibility"/>
+        <local:ConvertIDIsEnabled x:Key="ConvertIDIsEnabled"/>
+        <local:ConvertTextToAdd x:Key="ConvertTextToAdd"/>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="150"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Bauhaus 93"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="Foreground" Value="#FF5D3008"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="/bbb.jpg"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Window">
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Width" Value="115"/>
+        </Style>
+        <local:ConvertTextToVisibility x:Key="ConvertTextToVisibility"/>
+        <local:ConvertTextToVisibility1 x:Key="ConvertTextToVisibility1"/>
+
+    </Application.Resources>
+</Application>

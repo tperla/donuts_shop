@@ -1,0 +1,33 @@
+﻿<Window x:Class="PL.productForList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        Title="productForList"  WindowStartupLocation="CenterScreen" Height="700" Width="1210">
+    <Grid Name="MainGrid" AutomationProperties.Name="productListView">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="500*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid Name="UpGrid" HorizontalAlignment="Stretch" Height="auto" Grid.Row="0"
+VerticalAlignment="Stretch" Width="auto">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions >
+            <ComboBox x:Name="categorySelector_cmb" Grid.Column="1" SelectionChanged="categorySelector_cmb_SelectionChanged"/>
+            <Label x:Name="categorySelectorDescription_lbl" Content="select category" HorizontalAlignment="Left" Margin="45,-10,0,0" VerticalAlignment="Top" FontSize="36" Width="390" Background="Transparent" Foreground="HotPink" FontFamily="Bauhaus 93" Grid.ColumnSpan="2"/>
+        </Grid>
+        <ListView x:Name="productListView" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}" MouseDoubleClick="productListView_MouseDoubleClick"  >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Add new Product" Height="70"  Grid.Row="1" HorizontalAlignment="Right" Margin="0,471,43,12" Padding="5" Click="Button_Click" Foreground="#FFF7EEEE" Background="HotPink" Width="253" FontWeight="Bold" FontFamily="Bauhaus 93" FontSize="24"/>
+    </Grid>
+</Window>

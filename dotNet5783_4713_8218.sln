@@ -1,0 +1,135 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stage0", "Stage0\Stage0.csproj", "{542E2D08-4859-4217-A7FF-FEF1162830BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AB54AA75-1995-470A-9353-33344C7F6617}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items (2)", "Solution Items (2)", "{F69BD18D-296B-4F04-8E28-6389B93F4336}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DalFacade", "DalFacade\DalFacade.csproj", "{20AB1799-8F8A-44DF-85EE-EBF283C25B03}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DalList", "DalList\DalList.csproj", "{A53E2E14-81D0-4A4B-81E2-A20D837CE687}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DalTest", "DalTest\DalTest.csproj", "{226C53E0-1795-4EF4-AF96-1BBF343E38EF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{64A461EE-07D9-4F32-B68D-A02EF2CA2E23} = {64A461EE-07D9-4F32-B68D-A02EF2CA2E23}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BL", "BL\BL.csproj", "{BD938DF2-771D-4A13-9B6F-2524AD2CBEC9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{64A461EE-07D9-4F32-B68D-A02EF2CA2E23} = {64A461EE-07D9-4F32-B68D-A02EF2CA2E23}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlTest", "BlTest\BlTest.csproj", "{24FF44B3-EB5C-4684-942D-30A0C8EC7738}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PL", "PL\PL.csproj", "{169E22D6-6EEB-4E42-9346-9B7C5EA6C1F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "xml", "xml", "{5C55F621-9AE2-4BD3-A5CF-9809FEE5D2CE}"
+	ProjectSection(SolutionItems) = preProject
+		xml\Configuration.xml = xml\Configuration.xml
+		xml\dal-config.xml = xml\dal-config.xml
+		xml\Order.xml = xml\Order.xml
+		xml\OrderItem.xml = xml\OrderItem.xml
+		xml\Product.xml = xml\Product.xml
+		xml\User.xml = xml\User.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "pictures", "pictures", "{27A677CE-F1EA-41BC-86A4-E0E2DC363F50}"
+	ProjectSection(SolutionItems) = preProject
+		pictures\America.PNG = pictures\America.PNG
+		pictures\BigBuston.PNG = pictures\BigBuston.PNG
+		pictures\BigCase.PNG = pictures\BigCase.PNG
+		pictures\BigLotus.PNG = pictures\BigLotus.PNG
+		pictures\BigNutella.PNG = pictures\BigNutella.PNG
+		pictures\BigOreo.PNG = pictures\BigOreo.PNG
+		pictures\Brauniz.PNG = pictures\Brauniz.PNG
+		pictures\Chanuka.PNG = pictures\Chanuka.PNG
+		pictures\Choclate.PNG = pictures\Choclate.PNG
+		pictures\Colorful.PNG = pictures\Colorful.PNG
+		pictures\ColorfulCup.PNG = pictures\ColorfulCup.PNG
+		pictures\defult.PNG = pictures\defult.PNG
+		pictures\Fistuc.PNG = pictures\Fistuc.PNG
+		pictures\HeartDonuts.PNG = pictures\HeartDonuts.PNG
+		pictures\Lotus25.PNG = pictures\Lotus25.PNG
+		pictures\LotusCase.PNG = pictures\LotusCase.PNG
+		pictures\LotusWaffel.PNG = pictures\LotusWaffel.PNG
+		pictures\LoveCase.PNG = pictures\LoveCase.PNG
+		pictures\Malabi.PNG = pictures\Malabi.PNG
+		pictures\MiniCase.PNG = pictures\MiniCase.PNG
+		pictures\Mix.PNG = pictures\Mix.PNG
+		pictures\NutellaCase.PNG = pictures\NutellaCase.PNG
+		pictures\NutellaWaffel.PNG = pictures\NutellaWaffel.PNG
+		pictures\Orange.PNG = pictures\Orange.PNG
+		pictures\Oreo25.PNG = pictures\Oreo25.PNG
+		pictures\OreoCase.PNG = pictures\OreoCase.PNG
+		pictures\OreoWaffel.PNG = pictures\OreoWaffel.PNG
+		pictures\Purim.PNG = pictures\Purim.PNG
+		pictures\StarDnuts.PNG = pictures\StarDnuts.PNG
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DalXml", "DalXml\DalXml.csproj", "{64A461EE-07D9-4F32-B68D-A02EF2CA2E23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simulator", "Simulator\Simulator.csproj", "{F13AB71F-31A4-4F85-B411-D907E261CE97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{542E2D08-4859-4217-A7FF-FEF1162830BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{542E2D08-4859-4217-A7FF-FEF1162830BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{542E2D08-4859-4217-A7FF-FEF1162830BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{542E2D08-4859-4217-A7FF-FEF1162830BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20AB1799-8F8A-44DF-85EE-EBF283C25B03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20AB1799-8F8A-44DF-85EE-EBF283C25B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20AB1799-8F8A-44DF-85EE-EBF283C25B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20AB1799-8F8A-44DF-85EE-EBF283C25B03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A53E2E14-81D0-4A4B-81E2-A20D837CE687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A53E2E14-81D0-4A4B-81E2-A20D837CE687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A53E2E14-81D0-4A4B-81E2-A20D837CE687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A53E2E14-81D0-4A4B-81E2-A20D837CE687}.Release|Any CPU.Build.0 = Release|Any CPU
+		{226C53E0-1795-4EF4-AF96-1BBF343E38EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{226C53E0-1795-4EF4-AF96-1BBF343E38EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{226C53E0-1795-4EF4-AF96-1BBF343E38EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{226C53E0-1795-4EF4-AF96-1BBF343E38EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD938DF2-771D-4A13-9B6F-2524AD2CBEC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD938DF2-771D-4A13-9B6F-2524AD2CBEC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD938DF2-771D-4A13-9B6F-2524AD2CBEC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD938DF2-771D-4A13-9B6F-2524AD2CBEC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24FF44B3-EB5C-4684-942D-30A0C8EC7738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24FF44B3-EB5C-4684-942D-30A0C8EC7738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24FF44B3-EB5C-4684-942D-30A0C8EC7738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24FF44B3-EB5C-4684-942D-30A0C8EC7738}.Release|Any CPU.Build.0 = Release|Any CPU
+		{169E22D6-6EEB-4E42-9346-9B7C5EA6C1F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{169E22D6-6EEB-4E42-9346-9B7C5EA6C1F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{169E22D6-6EEB-4E42-9346-9B7C5EA6C1F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{169E22D6-6EEB-4E42-9346-9B7C5EA6C1F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64A461EE-07D9-4F32-B68D-A02EF2CA2E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64A461EE-07D9-4F32-B68D-A02EF2CA2E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64A461EE-07D9-4F32-B68D-A02EF2CA2E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64A461EE-07D9-4F32-B68D-A02EF2CA2E23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F13AB71F-31A4-4F85-B411-D907E261CE97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F13AB71F-31A4-4F85-B411-D907E261CE97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F13AB71F-31A4-4F85-B411-D907E261CE97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F13AB71F-31A4-4F85-B411-D907E261CE97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{24FF44B3-EB5C-4684-942D-30A0C8EC7738} = {F69BD18D-296B-4F04-8E28-6389B93F4336}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CDDCFCE-1C16-4594-96D4-5D4F138BFD26}
+	EndGlobalSection
+EndGlobal

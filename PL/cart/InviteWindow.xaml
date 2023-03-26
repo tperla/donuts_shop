@@ -1,0 +1,28 @@
+﻿<Window x:Class="PL.cart.InviteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        WindowStyle="None" ResizeMode="NoResize"
+        xmlns:local="clr-namespace:PL.cart"
+        mc:Ignorable="d"
+        DataContext="{Binding MyCart,RelativeSource={RelativeSource self}}"
+        Title="InviteWindow" WindowStartupLocation="CenterScreen" Height="500" Width="800">
+    <Grid Margin="-4,10,10,-10">
+        <Label Content="fill your details:" HorizontalAlignment="Left" Margin="107,56,0,0" VerticalAlignment="Top" Foreground="#FFD446B5" FontSize="30" FontFamily="Ink Free" FontWeight="Black" Width="216"/>
+        <Label Content="Adress" HorizontalAlignment="Left" Margin="106,124,0,0" VerticalAlignment="Top" FontWeight="Black" FontSize="25" FontFamily="Ink Free" Foreground="#FFD846B8"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="104,179,0,0" VerticalAlignment="Top" Foreground="#FFD846B8" FontWeight="Black" FontSize="25" FontFamily="Ink Free" RenderTransformOrigin="1.641,-1.293"/>
+        <TextBox x:Name="adress_cart" KeyDown="textBox_KeyDown" InputLanguageManager.InputLanguage="en-US" Text="{Binding CustomerAdress}" HorizontalAlignment="Left" Margin="240,138,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="238" FontSize="20" FontWeight="Black" Foreground="#FFB1A8A8" FontFamily="Ink Free"/>
+        <Button Content="↩" HorizontalAlignment="Left" Height="60" Margin="719,418,0,0" VerticalAlignment="Top" Width="65"  Click="Button_Click"/>
+
+        <TextBox x:Name="email_cart" InputLanguageManager.InputLanguage="en-US" KeyDown="textBox_KeyDown" HorizontalAlignment="Left" Margin="240,186,0,0" TextWrapping="Wrap" Text="{Binding CustomerEmail}" VerticalAlignment="Top" Width="238" FontSize="20" Foreground="#FFB1A8A8" FontWeight="Black" FontFamily="Ink Free"/>
+        <RadioButton x:Name="delivery" Content="delivery" HorizontalAlignment="Left" Margin="131,248,0,0" VerticalAlignment="Top" Checked="delivery_Checked" FontFamily="Ink Free" FontSize="20" FontWeight="Black"/>
+        <RadioButton x:Name="free" Content="byYourSelf" HorizontalAlignment="Left" Margin="131,297,0,0" VerticalAlignment="Top" Checked="free_Checked" FontFamily="Ink Free" FontSize="20" FontWeight="Black" />
+        <Button x:Name="ordered" Content="👍" HorizontalAlignment="Left" Margin="148,331,0,0" VerticalAlignment="Top" Click="ordered_Click" Height="147" Width="164" FontWeight="Black" FontSize="50" FontFamily="Ink Free" Foreground="Black"/>
+        <Label x:Name="totalprice_txt" Content="{Binding TotalPrice}" VerticalAlignment="Top" Foreground="#FFD446B5" FontSize="30" FontFamily="Ink Free" FontWeight="Black" Width="110" HorizontalAlignment="Left" Margin="606,289,0,0" Height="47"  RenderTransformOrigin="6.666,3.859"/>
+        <Label Content="free" HorizontalAlignment="Left" Margin="258,291,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.54,1.03" FontWeight="Black" FontSize="20" FontFamily="Ink Free"/>
+        <Label  Content="{Binding CustomerName}"  HorizontalAlignment="Left" Margin="115,18,0,0" VerticalAlignment="Top" Width="254" Height="37" Foreground="#FFD446B5" FontWeight="Black" FontSize="30" FontFamily="Ink Free"/>
+        <Label Content="20₪" HorizontalAlignment="Left" Margin="235,241,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Ink Free" FontWeight="Black"/>
+        <Label Content="Total Price"  Foreground="#FFD446B5" FontSize="30" FontFamily="Ink Free" FontWeight="Black" Width="172" HorizontalAlignment="Left" Margin="590,235,0,0" VerticalAlignment="Top" Height="42" />
+    </Grid>
+</Window>

@@ -1,0 +1,32 @@
+﻿<Window x:Class="PL.productKatalogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+         DataContext="{Binding productCurrent,RelativeSource={RelativeSource self}}"
+        Title="prosucrKatalogWindow" WindowStartupLocation="CenterScreen" Height="600" Width="800">
+    <Grid Background="#FFF2F2F2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="shoeProducr" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Height="387" Width="780" Grid.Column="2">
+            <Label x:Name="nameLabel"  Content="{Binding Name}" HorizontalAlignment="Left" Margin="94,26,0,0"  VerticalAlignment="Top" Height="92" Width="323" FontSize="30" FontWeight="Bold" FontFamily="Bowlby One SC" Foreground="#FFFD708C" Background="#FFF2F2F2"/>
+            <Label x:Name="categoryLabel" Content="{Binding Category}" HorizontalAlignment="Left" Margin="110,138,0,0" VerticalAlignment="Top" Height="56" Width="237" FontWeight="Bold" FontSize="25" FontFamily="Bauhaus 93"/>
+            <Label Grid.Column="0" Content="In Stock:" HorizontalAlignment="Left" Margin="140,209,0,0" VerticalAlignment="Top" FontSize="25" FontWeight="Bold" FontFamily="Bauhaus 93"/>
+            <CheckBox x:Name="inStockCheckBox" Content="" HorizontalAlignment="Left" IsChecked="{Binding InStock, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="273,220,0,0" IsEnabled="False" VerticalAlignment="Top" RenderTransformOrigin="2.203,-3.195" Height="26" Width="37" FontWeight="Bold"/>
+            <Image Stretch="Uniform" x:Name="pictureImage" HorizontalAlignment="Left" Margin="372,26,0,0" Source="{Binding picture ,Converter={StaticResource ImagePathToBitMap}}" Height="367" Width="385" VerticalAlignment="Top"/>
+            <Label Grid.Column="0" FontSize="25" FontWeight="Bold" FontFamily="Bauhaus 93" Content="ILS" HorizontalAlignment="Left" Margin="228,261,0,0" VerticalAlignment="Top" RenderTransformOrigin="3.02,0.56"/>
+            <Label x:Name="priceLabel" FontWeight="Bold" FontSize="25" FontFamily="Bauhaus 93" Content="{Binding Price}" HorizontalAlignment="Left" Margin="160,261,0,0" VerticalAlignment="Top" Height="47" Width="107"/>
+        </Grid>
+        <Button x:Name="add" Tag="{Binding ID}" Click="add_Click" Height="200" Width="300" Margin="235,341,265,43" Grid.ColumnSpan="3">
+            <Button.Background>
+                <ImageBrush ImageSource="/butonlog.PNG"/>
+            </Button.Background>
+
+        </Button>
+    </Grid>
+</Window>

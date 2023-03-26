@@ -1,0 +1,55 @@
+﻿<Window x:Class="PL.mainManager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        WindowStyle="None" ResizeMode="NoResize"
+        mc:Ignorable="d"
+        DataContext="{Binding RelativeSource={RelativeSource self}}"
+        Title="mainManager"   WindowStartupLocation="CenterScreen"   Height="700" Width="1210">
+    <Grid>
+        <Grid DataContext="{Binding user}" Background="White" Margin="0,17,0,-17">
+            <Button Content="products" HorizontalAlignment="Left" Margin="746,342,0,0" VerticalAlignment="Top" Height="208" Width="245" Click="Button_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/bbb.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Content="order" HorizontalAlignment="Left" Margin="139,385,0,0" VerticalAlignment="Top" Height="236" Width="252" Click="Button_Click_1"/>
+            <Label x:Name="nameMenager"  HorizontalAlignment="Center" Content="{Binding UserName}" Margin="0,71,0,0" VerticalAlignment="Top" Height="44" Width="282" FontSize="25" FontFamily="Bauhaus 93" Foreground="#FFCA4E8A" />
+            <Button Content="Traking" HorizontalAlignment="Left" Margin="70,5,0,0" VerticalAlignment="Top" Click="Button_Click_2" Height="255" Width="272" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-5.904"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="addNewManager_btn" Content="new manager" HorizontalAlignment="Left" Height="222" Margin="889,25,0,0" VerticalAlignment="Top" Width="228" Click="addNewManager_btn_Click" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="6.01"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="return_btn" Content="↩" HorizontalAlignment="Left" Height="72" Margin="1069,549,0,0" VerticalAlignment="Top" Width="68" Click="return_btn_Click" RenderTransformOrigin="5.716,3.334"/>
+            <Image HorizontalAlignment="Left" Height="333" VerticalAlignment="Top" Width="699" Source="/m.jpg" RenderTransformOrigin="0.5,0.5" Margin="459,118,0,0">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-8.262"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Grid>
+        <Label x:Name="time" FontSize="25" Content="{Binding currentHour,Converter={StaticResource convertTime }}" HorizontalAlignment="Center" Margin="0,17,0,0" VerticalAlignment="Top" Width="322"  FontWeight="Bold" Height="45" Foreground="#FFCA4E8A"/>
+
+    </Grid>
+</Window>

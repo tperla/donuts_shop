@@ -1,0 +1,41 @@
+﻿<Window x:Class="PL.trakOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        DataContext="{Binding OrderT,RelativeSource={RelativeSource Self}}"
+        Title="OrderTrack" Height="450" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="/kutd.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid x:Name="grid1"   HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="83,44,0,0" Height="380" Width="717">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="1" Content="reservation number:" HorizontalAlignment="Left" VerticalAlignment="Center" Background="{x:Null}" Foreground="#FFFF10B3" ForceCursor="True" FontWeight="Black" FontFamily="Ink Free" FontSize="25" Margin="98,0,0,0"/>
+            <TextBox x:Name="iDTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="333,5,0,0" Text="{Binding Id, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Top" Width="148" IsEnabled="False" Foreground="#FFB9B3B3" FontFamily="Ink Free" FontWeight="Black" FontSize="25"/>
+
+            <Label Grid.Column="1" Content="Status:" HorizontalAlignment="Left" Margin="98,0,0,0" Grid.Row="1" VerticalAlignment="Center" Foreground="#FFFF00A1" FontWeight="Black" FontSize="25" FontFamily="Ink Free"/>
+            <TextBox x:Name="statusTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="NaN" Margin="202,0,0,0" Grid.Row="1" Text="{Binding status, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120" IsEnabled="False" Foreground="#FFB9B3B3" FontWeight="Black" FontSize="25" FontFamily="Ink Free"/>
+
+            <DataGrid x:Name="trackingDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Traking}" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="10,20,0,-240" Grid.Column="1" Grid.Row="2" IsReadOnly="True" IsEnabled="False" BorderBrush="#FFFF10B3" Background="#FFF5C8DE" FontFamily="Ink Free" FontSize="15" FontWeight="Black" Foreground="Black" HorizontalAlignment="Left" Width="650">
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="item1Column" Binding="{Binding Item1}" Header="Item 1" IsReadOnly="True" Width="325" />
+                    <DataGridTextColumn x:Name="item2Column" Binding="{Binding Item2}" Header="Item 2" IsReadOnly="True" Width="325"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+    </Grid>
+</Window>
+
+

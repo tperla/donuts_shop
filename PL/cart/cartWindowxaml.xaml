@@ -1,0 +1,74 @@
+﻿<Window x:Class="PL.cart.cartWindowxaml"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL.cart"
+        WindowStyle="None" ResizeMode="NoResize"
+        mc:Ignorable="d"
+        DataContext="{Binding cart,RelativeSource={RelativeSource self}}"
+        Title="cartWindowxaml"  WindowStartupLocation="CenterScreen" Height="700" Width="1300">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="LightPink"/>
+            <Setter Property="Foreground"  Value="#FFD62899"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+        <DataTemplate x:Key="OneProductItemTemplate" DataType="local:ProductItem">
+            <Grid HorizontalAlignment="Center" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50*" />
+                    <RowDefinition Height="16*" />
+                    <RowDefinition Height="16*" />
+                    <RowDefinition Height="74.5" />
+                    <RowDefinition Height="25*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row="0" Width="300" Height="280" Source="{Binding picture ,Converter={StaticResource ImagePathToBitMap}}"></Image>
+                <TextBlock FontFamily="Bauhaus 93"  Foreground="#FFAE136A" FontSize="20" Grid.Row="1" Text="{Binding Path=Name}" />
+                <TextBlock FontFamily="Bauhaus 93" Foreground="#FFAE136A" FontSize="20" Grid.Row="2" Text="{Binding Path=Price}" />
+                <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <Button x:Name="plus" Tag="{Binding Path=ID}" Content="+"  Height="25" FontFamily="Bauhaus 93"  Width="25" Click="plus_Click"/>
+                    <TextBox x:Name="currentAmount" Tag="{Binding Path=ID}" Text="{Binding Path=Amount}" FontFamily="Bauhaus 93"  Height="20" Width="20" />
+                    <Button x:Name="minus"  Tag="{Binding Path=ID}" Content="-" Height="25" Width="25" FontFamily="Bauhaus 93"  Click="minus_Click"/>
+                    <Button x:Name="deleteItem"  Tag="{Binding Path=ID}" Content="x"  Grid.Row="3" Height="25" Width="25" Margin="5,43,18,5" Click="deleteItem_Click" RenderTransformOrigin="0.5,0.5">
+                        <Button.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="-1" ScaleY="-1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Button.RenderTransform>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid Name="MainCart" AutomationProperties.Name="mainopennig" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="100*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox  Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}"  x:Name="ProductsItemsListBox" ItemsSource="{Binding Items}" ItemTemplate="{StaticResource OneProductItemTemplate}" Margin="0,42,0,82"  >
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="1"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+        <Label x:Name="empty_lbl"  Content="sorry your cart is empty" Visibility="{Binding ElementName=totalp_txt, Path= Text, Converter={StaticResource ConvertTextToVisibility1} }" HorizontalAlignment="Left" Margin="264,196,0,0" VerticalAlignment="Top" Width="426" Height="126" Grid.Column="1" Foreground="#FFD446B5" FontFamily="Ink Free" FontSize="30" FontWeight="Black" />
+        <Button x:Name="empty" Grid.Column="1" Visibility="{Binding ElementName=totalp_txt, Path= Text, Converter={StaticResource ConvertTextToVisibility} }" Content="🗑" HorizontalAlignment="Left" Height="60" Margin="566,614,0,0" VerticalAlignment="Top" Width="85" Click="empty_Click"/>
+        <Button Grid.Column="1" Content="🍩↩" HorizontalAlignment="Left" Height="60" Margin="676,614,0,0" VerticalAlignment="Top" Width="85" MouseDoubleClick="Button_MouseDoubleClick" Click="Button_Click"/>
+
+        <Grid x:Name="GoOrder" Grid.ColumnSpan="2" Margin="0,0,533,249">
+            <TextBox x:Name="totalp_txt" Text="{Binding TotalPrice}" HorizontalAlignment="Left" Margin="183,62,0,0" VerticalAlignment="Top" Height="35" Width="99" Foreground="#FFA79DA5" FontWeight="Black" FontSize="25" FontFamily="Ink Free"/>
+            <Button x:Name="goOrder_btn" Content="go order" HorizontalAlignment="Left" Margin="63,121,0,0" VerticalAlignment="Top" Click="goOrder_btn_Click" Height="60" Width="163" Foreground="#FFD446B5" FontSize="30" FontWeight="Black" FontFamily="Ink Free"/>
+            <Label x:Name="total_txt"  Content="total price" HorizontalAlignment="Left" Margin="63,62,0,0" VerticalAlignment="Top" Foreground="#FFD446B5" FontSize="20" FontFamily="Ink Free" FontWeight="Black"/>
+        </Grid>
+        <Label x:Name="namelbl"  Content="{Binding CustomerName}"  HorizontalAlignment="Left" Margin="12,10,0,0" VerticalAlignment="Top" Width="254" Height="50" Grid.Column="1" Foreground="#FFD446B5" FontWeight="Black" FontSize="27" FontFamily="Ink Free"/>
+
+    </Grid>
+</Window>
